@@ -2,24 +2,24 @@
 ####################
 _save/
 assets
-lock_in+pid_harmonic/fpga/project/
-lock_in+pid_harmonic/src/old/
+lock_in+pid_harmonic_hf/fpga/project/
+lock_in+pid_harmonic_hf/src/old/
 _settings.env
 _build_number
-lock_in+pid_harmonic/target/
-lock_in+pid_harmonic/target_dbg/
-lock_in+pid_harmonic/target_rld/
-lock_in+pid_harmonic/fpga/out/
-lock_in+pid_harmonic/fpga/.srcs/
+lock_in+pid_harmonic_hf/target/
+lock_in+pid_harmonic_hf/target_dbg/
+lock_in+pid_harmonic_hf/target_rld/
+lock_in+pid_harmonic_hf/fpga/out/
+lock_in+pid_harmonic_hf/fpga/.srcs/
 archive/
-lock_in+pid_harmonic/fpga/.Xil
-lock_in+pid_harmonic/fpga/sdk
+lock_in+pid_harmonic_hf/fpga/.Xil
+lock_in+pid_harmonic_hf/fpga/sdk
 
 # Compiled source #
 ###################
 *.o
 *.so
-!lock_in+pid_harmonic/controllerhf.so
+!lock_in+pid_harmonic_hf/controllerhf.so
 
 # Packages #
 ############

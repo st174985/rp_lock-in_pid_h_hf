@@ -18,7 +18,7 @@ import sys
 
 from control_hugo import red_pitaya_control,red_pitaya_app
 
-AppName      = 'lock_in+pid_harmonic'
+AppName      = 'lock_in+pid_harmonic_hf'
 host         = 'rp-f00a3b.local'
 port         = 22  # default port
 trigger_type = 6   # 6 is externa trigger
@@ -74,6 +74,3 @@ d.plot_allan_error(0)
 
 d.allan_range2('oscB' ,start=0,end=42800)
 d.plot_allan_error(1)
-
-
-

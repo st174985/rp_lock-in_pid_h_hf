@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 read file created with:
-    /opt/redpitaya/www/apps/lock_in+pid_harmonic/py/data_dump_file.py
+    /opt/redpitaya/www/apps/lock_in+pid_harmonic_hf/py/data_dump_file.py
 """
 
 
@@ -25,7 +25,7 @@ if 'Columns' in txt:
     reg_names = txt.strip().split(' ')[1].split(',')
 else:
     raise ValueError(f'Columns not in txt file: {filename}.txt')
-    
+
 
 
 
@@ -33,7 +33,7 @@ bin_str='!f'
 
 for reg_name in reg_names:
     bin_str +=  'L' if 'cnt_clk' in reg_name else 'l'
-    
+
 
 
 cs = struct.calcsize(bin_str)
@@ -122,23 +122,3 @@ for ii in [2,3,4]:
     ax.plot( cnt_t ,dat , alpha =0.8 , label=reg_names[ii] )
 
 ax.legend()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

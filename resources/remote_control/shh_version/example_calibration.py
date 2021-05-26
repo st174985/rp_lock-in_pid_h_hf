@@ -20,7 +20,7 @@ sys.path.append(r'C:\Users\Nestor\Desktop\lolo\lib')
 
 from control_hugo import red_pitaya_control,red_pitaya_app
 
-AppName      = 'lock_in+pid_harmonic'
+AppName      = 'lock_in+pid_harmonic_hf'
 host         = '10.0.32.207'
 port         = 22  # default port
 trigger_type = 6   # 6 is externa trigger
@@ -91,7 +91,3 @@ rp.calib_params['FE_CH2_FS_G_HI'] = int(rp.calib_params['FE_CH2_FS_G_HI']/ch2_ac
 
 print('Saving new calibration. Please, restart de web App.')
 rp.set_adc_dac_calib()
-
-
-
-

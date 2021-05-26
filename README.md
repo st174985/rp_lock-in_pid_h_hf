@@ -1,4 +1,4 @@
-# Red Pitaya Lock-in+PID Application with HARMONIC modulation
+# Red Pitaya Lock-in+PID Application with HARMONIC High Frequency modulation
 
 This started being a striped version of [lock-in+PID](https://github.com/marceluda/rp_lock-in_pid) project. Now it incorporated some new features that make it another App.
 
@@ -31,7 +31,7 @@ This is an application built for the [Red Pitaya STEMlab 125-14](https://www.red
 The board is closed-hardware and open-software. You can buy the board and build your own software.
 
 If you have a RP board you can install the **Lock-in+PID** application
-by copying the `lock_in+pid_harmonic` folder (that comes with this tar/zip file) to the
+by copying the `lock_in+pid_harmonic_hf` folder (that comes with this tar/zip file) to the
 `/opt/redpitaya/www/apps` folder (inside the RP).
 
 For more information about installing procedure, refer to:
@@ -99,5 +99,5 @@ UnZip / UnTar the App folder. Execute from terminal:
 
 Replace `rp-XXXXXX.local` by your RP localname or IP address
 
-Also, you can use your own SSH client and upload the lock_in+pid_harmonic folder the the
+Also, you can use your own SSH client and upload the lock_in+pid_harmonic_hf folder the the
 RedPiaya folder: `/opt/redpitaya/www/apps`
