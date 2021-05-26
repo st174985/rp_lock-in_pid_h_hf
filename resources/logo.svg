@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="icon.png"
+   inkscape:export-filename="logo.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="-0.34914316"
-     inkscape:cy="50.335728"
+     inkscape:zoom="7.919596"
+     inkscape:cx="41.645443"
+     inkscape:cy="42.375341"
      inkscape:document-units="px"
      inkscape:current-layer="g911"
      showgrid="false"
@@ -525,30 +525,46 @@
        style="stroke-linecap:butt;stroke-linejoin:round"
        transform="matrix(1.5109508,-0.40485805,0.40485805,1.5109508,134.95455,-35.122921)"
        id="g911">
-      <rect
-         style="fill:#ffffff;fill-opacity:1;stroke:#800000;stroke-width:1.91785038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect901"
-         width="44.699249"
-         height="18.435286"
-         x="-88.893425"
-         y="29.289322"
-         ry="3.5355339"
-         rx="3.5355356" />
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot909"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-         transform="translate(21.009733,37.131339)"><flowRegion
-           id="flowRegion905"
-           style="stroke-width:0.31964171;stroke-linecap:butt;stroke-linejoin:round"><rect
-             id="rect903"
-             width="75.508904"
-             height="35.607876"
-             x="-106.82363"
-             y="-4.0457115"
-             style="fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
-           id="flowPara907"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.52377892px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none">harmonic</flowPara></flowRoot>    </g>
+      <g
+         id="g954"
+         transform="rotate(-15,-67.853733,43.39571)"
+         style="stroke-linecap:butt;stroke-linejoin:round">
+        <path
+           id="rect901"
+           transform="matrix(0.61750039,0.16545873,-0.16545873,0.61750039,-89.145881,-0.64099133)"
+           d="m 20.570312,35.582031 c -3.063878,0 -5.53125,2.46542 -5.53125,5.529297 v 17.777344 c 1e-6,3.063877 2.467372,5.529297 5.53125,5.529297 h 13.914063 v 10.302734 c 0,3.063877 2.467372,5.53125 5.53125,5.53125 h 19.96875 c 3.063878,0 5.53125,-2.467373 5.53125,-5.53125 V 64.417969 h 13.914063 c 3.063878,0 5.53125,-2.46542 5.53125,-5.529297 V 41.111328 c -10e-7,-3.063877 -2.467372,-5.529297 -5.53125,-5.529297 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <flowRoot
+           transform="rotate(15,-218.06893,99.733679)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+           id="flowRoot909"
+           xml:space="preserve"><flowRegion
+             style="stroke-width:0.31964171;stroke-linecap:butt;stroke-linejoin:round"
+             id="flowRegion905"><rect
+               style="fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+               y="-4.0457115"
+               x="-106.82363"
+               height="35.607876"
+               width="75.508904"
+               id="rect903" /></flowRegion><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.52377892px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             id="flowPara907">harmonic</flowPara></flowRoot>        <flowRoot
+           transform="rotate(15,-273.23663,143.54348)"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0px;word-spacing:0px;display:inline;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+           id="flowRoot909-6"
+           xml:space="preserve"><flowRegion
+             style="stroke-width:0.31964171;stroke-linecap:butt;stroke-linejoin:round"
+             id="flowRegion905-7"><rect
+               style="fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+               y="-4.0457115"
+               x="-106.82363"
+               height="35.607876"
+               width="75.508904"
+               id="rect903-5" /></flowRegion><flowPara
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.52377892px;line-height:1.25;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#333333;stroke:#000000;stroke-width:0.63928342;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             id="flowPara907-3">HF</flowPara></flowRoot>      </g>
+    </g>
   </g>
   <g
      inkscape:label="RELOAD"
