@@ -23,6 +23,16 @@ module gen_mod_h
 );
 
 
+
+    // [PERIOD_LEN_PARAM DOCK]
+
+    localparam mem_large =  12'd120   ; // complete signal large
+    localparam mem_f1    =  12'd30   ; // memory large for cos_f1
+    localparam mem_f2    =   9'd15; // memory large for cos_f2
+    localparam mem_f3    =   8'd10; // memory large for cos_f3
+    // [PERIOD_LEN_PARAM DOCK END]
+
+
     reg  [12-1:0] phase_b;
     wire          cnt_next_zero;
 
@@ -34,35 +44,35 @@ module gen_mod_h
     wire [15-1:0] tau_tick_cnt_next;
 
 
-    reg signed [14-1:0] memory_sin_r [630-1:0]; // vector for amplitude value
+    reg signed [14-1:0] memory_sin_r [mem_f1-1:0]; // vector for amplitude value
     initial
     begin
-        $readmemb("data_sin_ss.dat", memory_sin_r); // read memory binary code from data_sin.dat
+        $readmemb("data_sin1.dat", memory_sin_r); // read memory binary code from data_sin.dat
     end
 
-    reg signed [14-1:0] memory_cos_r [630-1:0]; // vector for amplitude value
+    reg signed [14-1:0] memory_cos_r [mem_f1-1:0]; // vector for amplitude value
     initial
     begin
-        $readmemb("data_cos_ss.dat", memory_cos_r); // read memory binary code from data_cos.dat
+        $readmemb("data_cos1.dat", memory_cos_r); // read memory binary code from data_cos.dat
     end
 
 
-    reg signed [14-1:0] memory_cos1_r [630-1:0]; // vector for amplitude value
+    reg signed [14-1:0] memory_cos1_r [mem_f1-1:0]; // vector for amplitude value
     initial
     begin
-        $readmemb("data_cos_ss.dat", memory_cos1_r); // read memory binary code from data_sin.dat
+        $readmemb("data_cos1.dat", memory_cos1_r); // read memory binary code from data_sin.dat
     end
 
-    reg signed [14-1:0] memory_cos2_r [315-1:0]; // vector for amplitude value
+    reg signed [14-1:0] memory_cos2_r [mem_f2-1:0]; // vector for amplitude value
     initial
     begin
-        $readmemb("data_cos2_ss.dat", memory_cos2_r); // read memory binary code from data_sin.dat
+        $readmemb("data_cos2.dat", memory_cos2_r); // read memory binary code from data_sin.dat
     end
 
-    reg signed [14-1:0] memory_cos3_r [210-1:0]; // vector for amplitude value
+    reg signed [14-1:0] memory_cos3_r [mem_f3-1:0]; // vector for amplitude value
     initial
     begin
-        $readmemb("data_cos3_ss.dat", memory_cos3_r); // read memory binary code from data_sin.dat
+        $readmemb("data_cos3.dat", memory_cos3_r); // read memory binary code from data_sin.dat
     end
 
     /* Frequency divider  --------------------------------------------*/
@@ -101,7 +111,7 @@ module gen_mod_h
             cnt           <=   10'b0    ;
             quad_bit      <=    2'b0    ;
             cntu          <=   12'b0    ;
-            phase_b       <=   12'd2519 ;
+            phase_b       <=   mem_large-1 ;
             //cnt_next_zero <=    1'b0;
         end
         else
@@ -110,15 +120,15 @@ module gen_mod_h
             quad_bit  <=  quad_bit_next     ;
             cntu      <=  cntu_next[12-1:0] ;
             if(phase==12'b0)
-                phase_b  <= 12'd2519 ;
+                phase_b  <= mem_large-1 ;
             else
                 phase_b  <= phase[12-1:0] - 12'b1 ;
         end
 
-    assign quad_add       = (cnt==10'd629 & quad_bit==2'b00 ) |
-                            (cnt==10'd000 & quad_bit==2'b01 ) |
-                            (cnt==10'd629 & quad_bit==2'b10 ) |
-                            (cnt==10'd000 & quad_bit==2'b11 )   ;
+    assign quad_add       = (cnt==(mem_f1-1) & quad_bit==2'b00 ) |
+                            (cnt==10'd000    & quad_bit==2'b01 ) |
+                            (cnt==(mem_f1-1) & quad_bit==2'b10 ) |
+                            (cnt==10'd000    & quad_bit==2'b11 )   ;
 
     assign quad_bit_next  = quad_add ? quad_bit + tau_tick : quad_bit ;
 
@@ -150,10 +160,10 @@ module gen_mod_h
             quad_bit1  <=  quad_bit1_next      ;
         end
 
-    assign quad_add1      = (cnt1==10'd629 & quad_bit1==2'b00 ) |
-                            (cnt1==10'd000 & quad_bit1==2'b01 ) |
-                            (cnt1==10'd629 & quad_bit1==2'b10 ) |
-                            (cnt1==10'd000 & quad_bit1==2'b11 )   ;
+    assign quad_add1      = (cnt1==(mem_f1-1) & quad_bit1==2'b00 ) |
+                            (cnt1==10'd000    & quad_bit1==2'b01 ) |
+                            (cnt1==(mem_f1-1) & quad_bit1==2'b10 ) |
+                            (cnt1==10'd000    & quad_bit1==2'b11 )   ;
 
     //assign quad_bit1_next = quad_add1 ? quad_bit1 + tau_tick : quad_bit1 ;
     assign quad_bit1_next = ( cntu == phase_b ) ? 2'b00  : quad_bit1 + (tau_tick&quad_add1) ;
@@ -185,10 +195,10 @@ module gen_mod_h
             quad_bit2  <=  quad_bit2_next      ;
         end
 
-    assign quad_add2      = (cnt2==9'd314 & quad_bit2==2'b00 ) |
-                            (cnt2==9'd000 & quad_bit2==2'b01 ) |
-                            (cnt2==9'd314 & quad_bit2==2'b10 ) |
-                            (cnt2==9'd000 & quad_bit2==2'b11 )   ;
+    assign quad_add2      = (cnt2==(mem_f2-1) & quad_bit2==2'b00 ) |
+                            (cnt2==9'd000     & quad_bit2==2'b01 ) |
+                            (cnt2==(mem_f2-1) & quad_bit2==2'b10 ) |
+                            (cnt2==9'd000     & quad_bit2==2'b11 )   ;
 
     assign quad_bit2_next = ( cntu == phase_b ) ? 2'b00  : quad_bit2 + (tau_tick&quad_add2) ;
 
@@ -222,10 +232,10 @@ module gen_mod_h
             quad_bit3  <=  quad_bit3_next      ;
         end
 
-    assign quad_add3      = (cnt3==8'd209 & quad_bit3==2'b00 ) |
-                            (cnt3==8'd000 & quad_bit3==2'b01 ) |
-                            (cnt3==8'd209 & quad_bit3==2'b10 ) |
-                            (cnt3==8'd000 & quad_bit3==2'b11 )   ;
+    assign quad_add3      = (cnt3==(mem_f3-1) & quad_bit3==2'b00 ) |
+                            (cnt3==8'd000     & quad_bit3==2'b01 ) |
+                            (cnt3==(mem_f3-1) & quad_bit3==2'b10 ) |
+                            (cnt3==8'd000     & quad_bit3==2'b11 )   ;
 
     assign quad_bit3_next = ( cntu == phase_b ) ? 2'b00  : quad_bit3 + (tau_tick&quad_add3) ;
 
