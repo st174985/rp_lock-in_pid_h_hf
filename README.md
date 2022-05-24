@@ -2,6 +2,7 @@
 
 This started being a striped version of [lock-in+PID](https://github.com/marceluda/rp_lock-in_pid) project. Now it incorporated some new features that make it another App.
 
+This High Frequency version is a copy of [Lock-in+PID Harmonic](https://github.com/marceluda/rp_lock-in_pid_h) with only one change: **The harmonic motulation signal frequencies can be set from 60 Hz to 1 MHz**.
 
 [![Example of usage](http://img.youtube.com/vi/330eYE75MYQ/0.jpg)](http://www.youtube.com/watch?v=330eYE75MYQ "Fast demosatration of usage")
 
