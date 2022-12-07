@@ -421,7 +421,8 @@ module lock(
     assign out_cos1    = ($signed(mod_out1) * $signed(cos_ref)) >>> 13 ;
     assign out_cos2    = ($signed(mod_out2) * $signed(sin_ref)) >>> 13 ;
 
-    assign out1_plus   = ~mod_out1[13] ? $signed(out1_tmp) + $signed(out_cos1[14-1:0]) : $signed(out1_tmp) ;
+    //assign out1_plus   = ~mod_out1[13] ? $signed(out1_tmp) + $signed(out_cos1[14-1:0]) : $signed(out1_tmp) ;
+    assign out1_plus   = $signed(out_cos1[14-1:0]) ;
     assign out2_plus   = ~mod_out2[13] ? $signed(out2_tmp) + $signed(out_cos2[14-1:0]) : $signed(out2_tmp) ;
 
     satprotect #(.Ri(15),.Ro(14),.SAT(14)) i_satprotect_out1  ( .in(out1_plus),  .out(out1) );
